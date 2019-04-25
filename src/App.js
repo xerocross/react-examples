@@ -8,7 +8,7 @@ function App() {
   }
   return (
     <div className="App">
-      Counter: { count }
+      Counter: { count }<br/>
       <input type="button" value="increment" onClick = {increment} />
     </div>
   );
