@@ -6,11 +6,22 @@ class App extends Component {
     this.state = {count: 0};
   }
 
+  thisTester () {
+    console.log(this);
+  }
+
   render() {
     return (
       <div className="App">
-        Counter: { this.state.count }<br/>
-        <input type="button" value="increment" />
+        <p>
+          Counter: { this.state.count }
+        </p>
+        <p>
+          <input type="button" value="increment" />
+        </p>
+        <p>
+          <input type="button" value="test value of 'this'" onClick = {this.thisTester} />
+        </p>
       </div>
     );
   }
