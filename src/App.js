@@ -1,17 +1,18 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-function App() {
-  let count = 0;
-  let increment = function() {
-    count = count + 1;
-    console.log("increment : " + count);
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {count: 0};
   }
-  return (
-    <div className="App">
-      Counter: { count }<br/>
-      <input type="button" value="increment" onClick = {increment} />
-    </div>
-  );
-}
 
+  render() {
+    return (
+      <div className="App">
+        Counter: { this.state.count }<br/>
+        <input type="button" value="increment" />
+      </div>
+    );
+  }
+}
 export default App;
