@@ -5,6 +5,7 @@ class App extends Component {
     super(props);
     this.state = {count: 0};
     this.increment = this.increment.bind(this);
+    this.reset = this.reset.bind(this);
   }
 
   thisTester () {
@@ -19,6 +20,12 @@ class App extends Component {
     console.log("increment: " + this.state.count);
   }
 
+  reset () {
+    this.setState((state, props)=>{
+      return {count : 0};
+    })
+  }
+
   render() {
     return (
       <div className="App">
@@ -27,6 +34,7 @@ class App extends Component {
         </p>
         <p>
           <input type="button" value="increment" onClick = {this.increment} />
+          <input type="button" value="reset" onClick = {this.reset} />
         </p>
         <p>
           <input type="button" value="test value of 'this'" onClick = {this.thisTester} />
